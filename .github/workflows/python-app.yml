@@ -22,12 +22,11 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
+        sudo apt-get install libcairo2-dev libgirepository1.0-dev libpango1.0-dev pkg-config python3-dev gir1.2-pango-1.0
+        sudo apt-get install libjpeg-dev zlib1g-dev
         sudo apt-get install python3.7-venv libpython3.7-dev
         python3.7 -m pip install poetry
         python3.7 -m poetry install
-        sudo apt-get install libcairo2-dev libgirepository1.0-dev libpango1.0-dev pkg-config python3-dev gir1.2-pango-1.0
-        sudo apt-get install libjpeg-dev zlib1g-dev
-        sudo apt install libgirepository1.0-dev
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
