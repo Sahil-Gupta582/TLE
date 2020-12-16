@@ -22,7 +22,7 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        apt-get install python3.7-venv libpython3.7-dev
+        sudo apt-get install python3.7-venv libpython3.7-dev
         python3.7 -m pip install poetry
         python3.7 -m poetry install
     - name: Lint with flake8
